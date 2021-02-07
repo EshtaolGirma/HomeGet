@@ -1,0 +1,28 @@
+
+.background_image{
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(/assets/img/housebg.jpg) ;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#inputs{
+ margin-top: 1em;
+ padding: 10em;
+}
+h4{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 1em;
+    color: azure;
+}
+h1{
+    text-align: center;
+    font-size: 75px;
+    padding-top: 1em;
+    color: azure;
+}
+
+.content{
+    position: absolute;
+}
