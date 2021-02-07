@@ -43,6 +43,9 @@ footer {
 .card-body {
   padding: 2rem;
 }
+.card-title{
+  font-weight: bold;
+}
 .card-title i {
   color: rgb(0, 253, 232);
 }
