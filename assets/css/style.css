@@ -1,0 +1,31 @@
+.header{
+    margin-left: 70px;
+    margin-top: 80px;
+    font-weight: 700;
+}
+.row{
+    margin-top: 100px;
+    border: 10px;
+   
+}
+.blogLink{
+    font-weight: bold;
+    color: black;
+    text-align: right;
+}
+.col-lg-4 .col-md-4 .col-12 .d-block .mb-4 .h-100 , h5{
+    overflow: hidden;
+
+}
+@media only screen and (max-width: 767px){
+    .navbar-nav .ml-auto{
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .navbar-toggler{
+        padding: 1px 5px;
+        font-size: 25px;
+        line-height: 0.3;
+        background: #fff;
+    }
+}
+            
