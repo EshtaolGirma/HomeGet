@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+    background: rgb(245, 244, 240);
+}
 .header{
     margin-left: 70px;
     margin-top: 80px;
@@ -8,7 +12,7 @@
     border: 10px;
    
 }
-.blogLink{
+.price{
     font-weight: bold;
     color: black;
     text-align: right;
@@ -17,15 +21,5 @@
     overflow: hidden;
 
 }
-@media only screen and (max-width: 767px){
-    .navbar-nav .ml-auto{
-        background: rgba(0, 0, 0, 0.5);
-    }
-    .navbar-toggler{
-        padding: 1px 5px;
-        font-size: 25px;
-        line-height: 0.3;
-        background: #fff;
-    }
-}
+
             
