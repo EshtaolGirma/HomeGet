@@ -1,0 +1,85 @@
+body{
+  overflow-x: hidden;
+}
+.carousel , slide{
+  width: 60%;
+  margin-left: 300px;
+  margin-top: 50px;
+  height: 30%;
+  margin-bottom: 100px;
+   
+}
+.carousel-inner {
+  position: fixed; 
+  width: 60%;
+  overflow: hidden;
+}
+  
+  /* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+.main {
+  flex: 70%;
+  flex-direction: row;
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+    
+}
+  
+  /* Side column */
+.side {
+  flex: 24%;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  margin-right: 2%;
+  background-color: rgb(255, 255, 255);
+}
+  
+#profilePic {
+  width: 100%;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 0 25%;
+      
+      
+}
+#profileName{
+  text-align: center;
+}
+#rentHeader{
+  margin-top: 50px;
+  margin-left: 100px;
+}
+#profileDescription{
+  text-align: center;
+}
+input[type=text], textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid black; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}

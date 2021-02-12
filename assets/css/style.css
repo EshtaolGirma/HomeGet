@@ -17,17 +17,20 @@ body{
     color: black;
     text-align: right;
 }
+
 .col-lg-4 .col-md-4 .col-12 .d-block .mb-4 .h-100 , h5{
     overflow: hidden;
 
 }
-a {
-    text-decoration: none;
-    color: rgb(152, 153, 153);
-  }
-  footer {
-    margin-top: 8.4rem;
-  }
+
+a
+{
+   text-decoration: none;
+   color: rgb(152, 153, 153);
+}
+footer {
+   margin-top: 8.4rem;
+}
  
   #subscriber-button {
     line-height: 3rem;
