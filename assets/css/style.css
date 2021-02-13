@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 .background_image{
     background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(/assets/img/housebg.jpg) ;
     height: 100%;
@@ -42,7 +42,7 @@ body{
     box-shadow: 0 2px 4px rgba(0,0,0,.04);
 }
 
-.navbar-brand , .nav-link, .my-form, .login-form
+.navbar-brand , .nav-link, .my-form
 {
     font-family: Raleway, sans-serif;
 }
