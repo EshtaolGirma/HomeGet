@@ -13,7 +13,7 @@ header {
   line-height: 52px;
   border: none;
   border-radius: 5px;
-  background-color: rgba(128, 128, 128, 0.3);
+  background-color: rgb(241, 241, 241);
   width: 100%;
 }
 .list-adding-link {
@@ -35,6 +35,17 @@ header {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 4px;
+}
+.agent-btn {
+  padding: 13px;
+}
+.agent-btn-holder {
+  height: 52px;
+  padding-top: 12px;
+  background-color: rgb(241, 241, 241);
+}
+.agent-btn-holder:hover {
+  background-color: #0ec6d5;
 }
 .work-place {
   text-align: center;
