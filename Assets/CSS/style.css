@@ -94,3 +94,17 @@ li {
 .gray-style {
   color: rgb(152, 153, 153);
 }
+
+
+.package-btn {
+  background-color: rgb(52, 182, 182);
+  color: white;
+  text-decoration: none;
+}
+.package-btn:hover {
+  text-decoration: none;
+  color: white;
+}
+.right-side {
+  text-align: end;
+}
