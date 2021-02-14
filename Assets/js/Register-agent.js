@@ -218,6 +218,55 @@ function displayRegisterForm() {
   cardDiv.appendChild(cardBody);
   containerDiv.appendChild(cardDiv);
   console.log("herer");
+
+  let DB;
+
+  let HomeGetDB = window.indexedDB.open("HomeGetDB", 1);
+  HomeGetDB.onsuccess = function (event) {
+    //code here
+    console.log("database opened successfully");
+    DB = HomeGetDB.result;
+  };
+  HomeGetDB.onerror = function (event) {
+    // code here
+    console.log("Error occurred");
+  };
+
+  function addNewAgent(e) {
+    e.preventDefault(); //the rest of code
+    // Add to DB
+    let newAgent = {
+      AgentName: nameInput.value,
+      AgentEmail: emailInput.value,
+      AgentMobileNUmber: mobileNumberInput.value,
+      AgentOfficeAddress: officeAddressInput.value,
+      AgentOfficePhoneNumber: officePhoneNumberInput.value,
+      AgentFacebookLink: facebookURIInput.value,
+      AgentTelegramLink: telegramURIInput.value,
+      SubscriptionType: "Free",
+      AgentReviewPoints: 0,
+      AgentReviewerNumber: 0,
+      AgentProfilePhoto: profilePhotoInput.value,
+      AgentPassword: passwordInput.value,
+    };
+
+    let transaction = DB.transaction(["Agents"], "readwrite");
+    let objectStore = transaction.objectStore("Agents");
+    let request = objectStore.add(newAgent);
+    request.onsuccess = () => {
+      console.log(1223);
+    };
+    transaction.oncomplete = () => {
+      console.log("New appointment added");
+      // displayTaskList();
+    };
+    transaction.onerror = () => {
+      console.log("There was an error, try again!");
+    };
+    location.reload();
+  }
+
+  registerButton.addEventListener("click", addNewAgent);
 }
 
 registerBtn.addEventListener("click", registerAgent);

@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Customer Review separated by ~ from customer name and use | to separate it from others review. ",
       PropertyReviewPoints: "total point",
       PropertyReviewersNUmber: "total reviewer customer number",
+      AgentName: "contact agent name",
     };
 
     let transaction = DB.transaction(["Agents"], "readwrite");
@@ -84,7 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // createindex: 1) field name 2) keypath 3) options
-    objectStore.createIndex("AgentName", "AgentName", { unique: false });
+    objectStore.createIndex("AgentName", "AgentName", { unique: true });
+    objectStore.createIndex("AgentEmail", "agentEmail", { unique: true });
 
     console.log("Database ready and fields created!");
 
@@ -94,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     listingStore.createIndex("HomeAddress", "HomeAddress", { unique: true });
+    listingStore.createIndex("AgentName", "AgentName", { unique: true });
     console.log("second table!");
   };
 });

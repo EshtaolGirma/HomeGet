@@ -74,3 +74,6 @@ header {
   height: 52px;
   background-color: #0ec6d5;
 }
+.form-control {
+  background-color: rgb(241, 241, 241);
+}
