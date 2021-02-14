@@ -142,14 +142,6 @@ function displayRegisterForm() {
   telegramURIInput.className = "form-control";
   telegramURIInput.placeholder = "https://t.me/username...";
 
-  // Register Button form
-  const RegisterButtonDiv = document.createElement("div");
-  RegisterButtonDiv.className = "container-fluid";
-
-  const registerButton = document.createElement("button");
-  registerButton.className = "btn btn-primary btn-lg";
-  registerButton.textContent = "Register";
-
   // Photo form
   const ProfilePhotoDiv = document.createElement("div");
   ProfilePhotoDiv.className = "mb-3 profilePhoto-input-div";
@@ -161,6 +153,18 @@ function displayRegisterForm() {
   const profilePhotoInput = document.createElement("input");
   profilePhotoInput.className = "form-control";
   profilePhotoInput.placeholder = "./Assets/img/123.jpg...";
+
+  // Register cancel Button form
+  const RegisterCancelButtonDiv = document.createElement("div");
+  RegisterCancelButtonDiv.className = "container-fluid";
+
+  const registerButton = document.createElement("button");
+  registerButton.className = "btn btn-primary btn-lg mr-1";
+  registerButton.textContent = "Register";
+
+  const cancelButton = document.createElement("button");
+  cancelButton.className = "btn btn-dark btn-lg ml-1";
+  cancelButton.textContent = "Cancel";
 
   cardBody.appendChild(h4Title);
 
@@ -206,8 +210,9 @@ function displayRegisterForm() {
   ProfilePhotoDiv.appendChild(profilePhotoInput);
   formDiv.appendChild(ProfilePhotoDiv);
 
-  RegisterButtonDiv.appendChild(registerButton);
-  formDiv.appendChild(RegisterButtonDiv);
+  RegisterCancelButtonDiv.appendChild(registerButton);
+  RegisterCancelButtonDiv.appendChild(cancelButton);
+  formDiv.appendChild(RegisterCancelButtonDiv);
 
   cardBody.appendChild(formDiv);
   cardDiv.appendChild(cardBody);
