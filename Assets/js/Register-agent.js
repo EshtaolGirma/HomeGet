@@ -108,7 +108,7 @@ function displayRegisterForm() {
 
   // Office Phone Number input form
   const officePhoneNumberInputDiv = document.createElement("div");
-  officePhoneNumberInputDiv.className = "mb-3 mobileNumber-input-div";
+  officePhoneNumberInputDiv.className = "mb-3 officeNumber-input-div";
 
   const officePhoneNumberLabel = document.createElement("label");
   officePhoneNumberLabel.className = "form-label";
@@ -120,7 +120,7 @@ function displayRegisterForm() {
 
   // Facebook uri input form
   const facebookURIInputDiv = document.createElement("div");
-  facebookURIInputDiv.className = "mb-3 mobileNumber-input-div";
+  facebookURIInputDiv.className = "mb-3 facebookLink-input-div";
 
   const facebookURILabel = document.createElement("label");
   facebookURILabel.className = "form-label";
@@ -132,7 +132,7 @@ function displayRegisterForm() {
 
   // Telegram uri input form
   const telegramURIInputDiv = document.createElement("div");
-  telegramURIInputDiv.className = "mb-3 mobileNumber-input-div";
+  telegramURIInputDiv.className = "mb-3 telegramLink-input-div";
 
   const telegramURILabel = document.createElement("label");
   telegramURILabel.className = "form-label";
@@ -145,10 +145,22 @@ function displayRegisterForm() {
   // Register Button form
   const RegisterButtonDiv = document.createElement("div");
   RegisterButtonDiv.className = "container-fluid";
+
   const registerButton = document.createElement("button");
   registerButton.className = "btn btn-primary btn-lg";
   registerButton.textContent = "Register";
-  //   registerButton.style = "width: 100%; height: 30px";
+
+  // Photo form
+  const ProfilePhotoDiv = document.createElement("div");
+  ProfilePhotoDiv.className = "mb-3 profilePhoto-input-div";
+
+  const profilePhotoLabel = document.createElement("label");
+  profilePhotoLabel.className = "form-label";
+  profilePhotoLabel.textContent = "Profile Photo URI";
+
+  const profilePhotoInput = document.createElement("input");
+  profilePhotoInput.className = "form-control";
+  profilePhotoInput.placeholder = "./Assets/img/123.jpg...";
 
   cardBody.appendChild(h4Title);
 
@@ -190,6 +202,10 @@ function displayRegisterForm() {
   telegramURIInputDiv.appendChild(telegramURIInput);
   formDiv.appendChild(telegramURIInputDiv);
 
+  ProfilePhotoDiv.appendChild(profilePhotoLabel);
+  ProfilePhotoDiv.appendChild(profilePhotoInput);
+  formDiv.appendChild(ProfilePhotoDiv);
+
   RegisterButtonDiv.appendChild(registerButton);
   formDiv.appendChild(RegisterButtonDiv);
 
@@ -200,30 +216,3 @@ function displayRegisterForm() {
 }
 
 registerBtn.addEventListener("click", registerAgent);
-
-// <div class="card  border-0 shadow p-3 mb-5 bg-white rounded mx-auto " id="incard">
-//             <div class="card-body" id="contcard">
-//                 <h4 class="card-title mt-2">Log in</h4>
-//                 <h6 class="card-subtitle mt-3 mb-3 text-muted">dont an account? <a href="#">sign up here</a></h6>
-//                 <form>
-//                     <div class="mb-3">
-//                         <label for="exampleInputEmail1" class="form-label">User name</label>
-//                         <input type="email" class="form-control" placeholder="USERNAME">
-
-//                     </div>
-//                     <div class="mb-3">
-//                         <label for="exampleInputPassword1" class="form-label">Password</label>
-//                         <input type="password" class="form-control" placeholder="PASSWORD">
-//                     </div>
-//                     <div class="mb-3 form-check">
-
-//                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-//                         <label class="form-check-label" for="exampleCheck1">Remeber me </label>
-//                         <p style="float: right;"><a href="#">Lost passored?</a></p>
-//                     </div>
-//                     <div class="container-fluid" id="sumitbtn">
-//                         <button type="submit" class="btn btn-primary " style="width: 100%;">Submit</button>
-//                     </div>
-//                 </form>
-//             </div>
-//         </div>
