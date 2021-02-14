@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
       SubscriptionType: "Free",
       AgentReviewPoints: "total points",
       AgentReviewerNumber: "total reviewer customer number",
+      AgentProfilePhoto: "profile photo uri",
+      AgentPassword: "login password",
     };
     let newProperty = {
       PropertyName: "home short description",
