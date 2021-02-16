@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 .background_image{
-    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(/assets/img/housebg.jpg) ;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(/Assets/img/housebg.jpg) ;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
