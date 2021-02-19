@@ -1,9 +1,9 @@
 var a = document.querySelector('#full_name');
 var b = document.querySelector('#email_address');
-var c = document.querySelector('#user_name');
 var d = document.querySelector('#present_address');
 var e = document.querySelector('#card_number');
 var f = document.querySelector('#phone_number');
+var registerBtn = document.querySelector("#regbtn");
 var cardno = /^(?:1[0][0-9]{13})$/;
 var emailtest = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 var phonenumber = /^\d{10}$/;
@@ -50,3 +50,12 @@ function validform() {
     }
 
 }
+
+function registering(){
+    if (validFrom() == false) {
+        addNewUser();
+    }
+ 
+}
+
+registerBtn.addEventListener("click", registering);
