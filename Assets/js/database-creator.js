@@ -19,10 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
       AgentFacebookLink: "facebook uri",
       AgentTelegramLink: "Telegram uri",
       SubscriptionType: "Free",
-      AgentReviewPoints: "total points",
-      AgentReviewerNumber: "total reviewer customer number",
       AgentProfilePhoto: "profile photo uri",
       AgentPassword: "login password",
+      listingNumber: "3",
+      oneLineDescription: "Broker",
+      Rating5: "5",
+      Rating4: "5",
+      Rating3: "5",
+      Rating2: "5",
+      Rating1: "5",
+
     };
     let newProperty = {
       PropertyName: "home short description",
