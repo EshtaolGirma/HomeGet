@@ -95,7 +95,7 @@ for (let i = 0; i < ratingStarsList.length; i++) {
   };
 }
 
-document.title = agentName.firstElementChild.innerText + " - HomeGet";
+
 
 // const urlParams = new URLSearchParams(window.location.search);
 // const id = Number(urlParams.get("id"));

@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
       Rating3: "5",
       Rating2: "5",
       Rating1: "5",
-
     };
     let newProperty = {
       PropertyName: "home short description",
@@ -52,6 +51,20 @@ document.addEventListener("DOMContentLoaded", () => {
       AgentName: "contact agent name",
     };
 
+    let newCustomer = {
+      CustomerName: "Customer 1",
+      CustomerEmail: "Customer email",
+      CustomerUserName: "customer user name",
+      CustomerPhoneNumber: "customer phone number",
+      CustomerNIDNumber: "customer id number",
+      CustomerAddress: "customer address",
+    };
+    let newCustomerContact = {
+      customerName: "contact info name",
+      customerEmail: "contact info email",
+      customerMessage: "contact info message",
+    };
+
     let transaction = DB.transaction(["Agents"], "readwrite");
     let objectStore = transaction.objectStore("Agents");
     let request = objectStore.add(newAgent);
@@ -59,6 +72,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let transaction2 = DB.transaction(["Property"], "readwrite");
     let objectStore2 = transaction2.objectStore("Property");
     let request2 = objectStore2.add(newProperty);
+
+    let transaction3 = DB.transaction(["Customer"], "readwrite");
+    let objectStore3 = transaction3.objectStore("Customer");
+    let request3 = objectStore3.add(newCustomer);
+
+    let transaction4 = DB.transaction(["CustomerContact"], "readwrite");
+    let objectStore4 = transaction4.objectStore("CustomerContact");
+    let request4 = objectStore4.add(newCustomerContact);
     request.onsuccess = () => {
       console.log("all done");
     };
@@ -71,6 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     request2.onsuccess = () => {
       console.log("Property added");
+    };
+    request3.onsuccess = () => {
+      console.log("Customer added");
+    };
+    request4.onsuccess = () => {
+      console.log("Customer contact added");
     };
   };
   HomeGetDB.onerror = function (event) {

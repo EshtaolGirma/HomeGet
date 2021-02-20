@@ -248,6 +248,7 @@ function displayRegisterForm() {
       AgentReviewerNumber: 0,
       AgentProfilePhoto: profilePhotoInput.value,
       AgentPassword: passwordInput.value,
+      oneLineDescription: "Broker",
     };
 
     let transaction = DB.transaction(["Agents"], "readwrite");
