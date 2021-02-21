@@ -58,11 +58,16 @@ document.addEventListener("DOMContentLoaded", () => {
       CustomerPhoneNumber: "customer phone number",
       CustomerNIDNumber: "customer id number",
       CustomerAddress: "customer address",
+      watchListPropertyID: "Home ID separated by @",
     };
     let newCustomerContact = {
-      customerName: "contact info name",
-      customerEmail: "contact info email",
+      CustomerName: "contact info name",
+      CustomerEmail: "contact info email",
       customerMessage: "contact info message",
+    };
+    let newCurrentUser = {
+      userRealId: "loged in user",
+      userType: "agent/customer",
     };
 
     let transaction = DB.transaction(["Agents"], "readwrite");
@@ -80,11 +85,16 @@ document.addEventListener("DOMContentLoaded", () => {
     let transaction4 = DB.transaction(["CustomerContact"], "readwrite");
     let objectStore4 = transaction4.objectStore("CustomerContact");
     let request4 = objectStore4.add(newCustomerContact);
+
+    let transaction5 = DB.transaction(["CurrentUser"], "readwrite");
+    let objectStore5 = transaction5.objectStore("CurrentUser");
+    let request5 = objectStore5.add(newCurrentUser);
+
     request.onsuccess = () => {
       console.log("all done");
     };
     transaction.oncomplete = () => {
-      console.log("New appointment added");
+      console.log("Agent added");
       // displayTaskList();
     };
     transaction.onerror = () => {
@@ -98,6 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     request4.onsuccess = () => {
       console.log("Customer contact added");
+    };
+    request5.onsuccess = () => {
+      console.log("Current User added");
     };
   };
   HomeGetDB.onerror = function (event) {
@@ -131,5 +144,29 @@ document.addEventListener("DOMContentLoaded", () => {
     listingStore.createIndex("HomeAddress", "HomeAddress", { unique: true });
     listingStore.createIndex("AgentName", "AgentName", { unique: true });
     console.log("second table!");
+
+    let customerStore = db.createObjectStore("Customer", {
+      keyPath: "CustomerID",
+      autoIncrement: true,
+    });
+    customerStore.createIndex("CustomerName", "CustomerName", { unique: true });
+    customerStore.createIndex("CustomerEmail", "CustomerEmail", {
+      unique: true,
+    });
+
+    let CustomerContactStore = db.createObjectStore("CustomerContact", {
+      keyPath: "ReviewID",
+      autoIncrement: true,
+    });
+
+    CustomerContactStore.createIndex("CustomerEmail", "CustomerEmail", {
+      unique: true,
+    });
+
+    let CurrentUserStore = db.createObjectStore("CurrentUser", {
+      keyPath: "UserID",
+      autoIncrement: true,
+    });
+    CurrentUserStore.createIndex("userRealId", "userRealId", { unique: true });
   };
 });
