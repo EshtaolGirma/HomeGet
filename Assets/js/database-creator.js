@@ -48,13 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
         "Customer Review separated by ~ from customer name and use | to separate it from others review. ",
       PropertyReviewPoints: "total point",
       PropertyReviewersNUmber: "total reviewer customer number",
-      AgentName: "contact agent name",
+      AgentName: "name",
     };
 
     let newCustomer = {
       CustomerName: "Customer 1",
       CustomerEmail: "Customer email",
-      CustomerUserName: "customer user name",
+      // CustomerUserName: "customer user name",
       CustomerPhoneNumber: "customer phone number",
       CustomerNIDNumber: "customer id number",
       CustomerAddress: "customer address",

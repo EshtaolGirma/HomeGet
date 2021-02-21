@@ -48,18 +48,6 @@ function displayRegisterForm() {
   emailInput.type = "email";
   emailInput.placeholder = "Email...";
 
-  // username input form
-  const usernameInputDiv = document.createElement("div");
-  usernameInputDiv.className = "mb-3 username-input-div";
-
-  const usernameLabel = document.createElement("label");
-  usernameLabel.className = "form-label";
-  usernameLabel.textContent = "User Name";
-
-  const usernameInput = document.createElement("input");
-  usernameInput.className = "form-control";
-  usernameInput.placeholder = "User Name...";
-
   // password input form
   const passwordInputDiv = document.createElement("div");
   passwordInputDiv.className = "mb-3 password-input-div";
@@ -176,10 +164,6 @@ function displayRegisterForm() {
   emailInputDiv.appendChild(emailInput);
   formDiv.appendChild(emailInputDiv);
 
-  usernameInputDiv.appendChild(usernameLabel);
-  usernameInputDiv.appendChild(usernameInput);
-  formDiv.appendChild(usernameInputDiv);
-
   passwordInputDiv.appendChild(passwordLabel);
   passwordInputDiv.appendChild(passwordInput);
   passwordInputDiv.appendChild(passwordLabel2);
@@ -217,7 +201,6 @@ function displayRegisterForm() {
   cardBody.appendChild(formDiv);
   cardDiv.appendChild(cardBody);
   containerDiv.appendChild(cardDiv);
-  console.log("herer");
 
   let DB;
 
