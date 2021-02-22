@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add to DB
     let newAgent = {
       AgentName: "name",
-      AgentEmail: "Email",
+      AgentEmail: "email@g.com",
       AgentMobileNUmber: "Mobile Number",
       AgentOfficeAddress: "office",
       AgentOfficePhoneNumber: "Phone Number",
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       AgentTelegramLink: "Telegram uri",
       SubscriptionType: "Free",
       AgentProfilePhoto: "profile photo uri",
-      AgentPassword: "login password",
+      AgentPassword: "pass",
       listingNumber: "3",
       oneLineDescription: "Broker",
       Rating5: "5",
