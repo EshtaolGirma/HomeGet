@@ -1,4 +1,4 @@
-var DB1;
+var DB;
 // const loginBtn;
 var user = document.getElementById("user");
 var pass = document.getElementById("pass");
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("There was an error");
   };
   HomeGet.onsuccess = function () {
-    DB1 = HomeGet.result;
+    DB = HomeGet.result;
 
     let objectStore = DB.transaction("Agents").objectStore("Agents");
     
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
           input[1].style.borderColor = "red";
         } else if (userChecker() == 0) {
           console.log("successful");
-          window.location.href = "packages.html";
+          window.location.href = "index.html";
         } else {
           console.log("Wrong username or password");
         }
