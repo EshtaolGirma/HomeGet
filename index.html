@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agents - HomeGet</title>
+    <title> HomeGet</title>
 
     <!-- Bootstrap CSS CDN  -->
 
@@ -20,9 +19,8 @@
     <script src="https://kit.fontawesome.com/618286edad.js" crossorigin="anonymous"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./Assets/CSS/agents-styling.css">
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
     <link rel="stylesheet" href="./Assets/CSS/footer.css">
-
 </head>
 
 <body>
@@ -88,154 +86,56 @@
         </div>
     </div>
 
-    <div class="container-fluid p-0">
-        <header>
-            <img src="./Assets/img/brokers-img.png" alt="" width="100%" srcset="">
-        </header>
-
-
-        <div class="main-container d-flex justify-content-center mt-5 pt-5">
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-11">
-                                <div class="card">
-                                    <div class="card-body m-4">
-                                        <h5 class="card-title">
-                                            Search
-                                        </h5>
-
-                                        <div class="row p-3">
-                                            <input id="search-input" value="" name="s" type="text"
-                                                placeholder="Enter Keyword...">
-
-                                        </div>
-                                        <div class="row pl-3 pr-3">
-                                            <button type="button" class="btn search-btn1">Search</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-                            <div class=" col-md-11 mt-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img id="register-agent-img" src="./Assets/img/Register Agent.jpg" alt=""
-                                            srcset="">
-                                        <p class="card-title text-center">
-                                            Want to work with us
-                                        </p>
-
-                                        <div class="row p-3 d-flex justify-content-center">
-                                            <button type="button" class="btn btn-lg register-btn">Register</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class=" col-md-11 mt-4">
-                                <div class="card">
-                                    <div class="card-body m-4 mb-1">
-                                        <h5 class="card-title">
-                                            Latest Posts
-                                        </h5>
-
-                                        <div class="row p-3">
-                                            <div class="col-4 p-0">
-                                                <img src="./Assets/img/latest-house-1.jpg" width="100%" height="80%"
-                                                    alt="" srcset="">
-                                            </div>
-
-                                            <div class="col-8">
-                                                We are Offering the Best RED
-                                                <p class="latest-post-date">
-                                                    February 8, 2020
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row p-3">
-                                            <div class="col-4 p-0">
-                                                <img src="./Assets/img/latest-house-1.jpg" width="100%" height="80%"
-                                                    alt="" srcset="">
-                                            </div>
-
-                                            <div class="col-8">
-                                                We are Offering the Best RED
-                                                <p class="latest-post-date">
-                                                    February 8, 2020
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row p-3">
-                                            <div class="col-4 p-0">
-                                                <img src="./Assets/img/latest-house-1.jpg" width="100%" height="80%"
-                                                    alt="" srcset="">
-                                            </div>
-
-                                            <div class="col-8">
-                                                We are Offering the Best RED
-                                                <p class="latest-post-date">
-                                                    February 8, 2020
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-8 p-0">
-                        <div class="row main-container-div">
-
-                            <div class="card-holder col-md-4 m-3 m-md-0 p-0">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-center">
-                                            <img class="agent-img" src="./Assets/img/132.jpg" alt="" srcset="">
-                                        </div>
-                                        <h5 class="card-title agent-name">
-                                            Aya Magdy
-                                        </h5>
-                                        <p class="work-place">
-                                            Real estate broker
-                                        </p>
-                                        <hr>
-                                        <p class="card-text d-flex justify-content-center">
-                                            b.gordon@homeid.com
-                                        </p>
-                                        <p class="d-flex justify-content-center">
-                                            +98 0390 909 039
-                                        </p>
-                                        <div class="btn agent-btn pb-0" style="width: 100%;">
-                                            <div class="row agent-btn-holder d-flex justify-content-center">
-                                                <div class="listing-amount">
-                                                    2
-                                                </div>
-                                                <div>
-                                                    Listing Properties
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+    <div class="background_image">
+        <h4 id="h4-text">LET US GUIDE YOUR HOME</h4>
+        <h1>Find Your Dream Home</h1>
+        <div class="input-group" id="inputs">
+            <input type="text" class="form-control" placeholder="brokers name" aria-label="brokers name"
+                id="broker_name">
+            <div class="input-group-append">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        subcity
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="">
+                        <a class="dropdown-item" id="" href="#">kolfe-keranio</a>
+                        <a class="dropdown-item" id="" href="#">yeka</a>
+                        <a class="dropdown-item" id="" href="#">bole</a>
+                        <a class="dropdown-item" id="" href="#">lideta</a>
+                        <a class="dropdown-item" id="" href="#">addis-ketema</a>
+                        <a class="dropdown-item" id="" href="#">akaki-kaliti</a>
+                        <a class="dropdown-item" id="" href="#">gulele</a>
+                        <a class="dropdown-item" id="" href="#">arada</a>
+                        <a class="dropdown-item" id="" href="#">kirkos</a>
+                        <a class="dropdown-item" id="" href="#">nifas-silk</a>
                     </div>
                 </div>
+                <button class="btn btn-outline-secondary" type="button">Search</button>
             </div>
         </div>
     </div>
+    <section class="why_choose py-5 " id="about-us">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class='text-success'>Welcome!</h1>
+                    <h2>Why Choose Us?</h2>
+                    <hr>
+                    <p>Our property managers know the market and how to determine the correct rent for your vacancy and
+                        in determining the proper rent increase amount. Let us show you Fair Market Rent.</p>
+                    <p>We have written rental standards that assist us in locating the right resident for your rental
+                        house.</p>
+                    <a href="contact.html"><button type="button" class="btn btn-success">contact us to Know
+                            More</button></a>
+
+                </div>
+                <div class="col-md-6">
+                    <img src="Assets/img/why-choose-us.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Footer -->

@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agents - HomeGet</title>
+    <title>Register - HomeGet</title>
 
     <!-- Bootstrap CSS CDN  -->
 
@@ -20,12 +19,12 @@
     <script src="https://kit.fontawesome.com/618286edad.js" crossorigin="anonymous"></script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./Assets/CSS/agents-styling.css">
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
     <link rel="stylesheet" href="./Assets/CSS/footer.css">
-
 </head>
 
-<body>
+<body class="register_body">
+
     <div class="d-flex justify-content-center" style="background-color:rgb(255, 255, 255)">
         <div class="col-md-9">
             <nav class="navbar navbar-expand-md ">
@@ -88,156 +87,76 @@
         </div>
     </div>
 
-    <div class="container-fluid p-0">
-        <header>
-            <img src="./Assets/img/brokers-img.png" alt="" width="100%" srcset="">
-        </header>
-
-
-        <div class="main-container d-flex justify-content-center mt-5 pt-5">
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-11">
-                                <div class="card">
-                                    <div class="card-body m-4">
-                                        <h5 class="card-title">
-                                            Search
-                                        </h5>
-
-                                        <div class="row p-3">
-                                            <input id="search-input" value="" name="s" type="text"
-                                                placeholder="Enter Keyword...">
-
-                                        </div>
-                                        <div class="row pl-3 pr-3">
-                                            <button type="button" class="btn search-btn1">Search</button>
-                                        </div>
+    <main class="my-form">
+        <div class="cotainer">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Register</div>
+                        <div class="card-body">
+                            <form name="my-form" onsubmit="validform()" action="" method="">
+                                <div class="form-group row">
+                                    <label for="full_name" class="col-md-4 col-form-label text-md-right">Full
+                                        Name</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="full_name" class="form-control" name="full-name">
                                     </div>
-
                                 </div>
-                            </div>
 
-
-                            <div class=" col-md-11 mt-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img id="register-agent-img" src="./Assets/img/Register Agent.jpg" alt=""
-                                            srcset="">
-                                        <p class="card-title text-center">
-                                            Want to work with us
-                                        </p>
-
-                                        <div class="row p-3 d-flex justify-content-center">
-                                            <button type="button" class="btn btn-lg register-btn">Register</button>
-                                        </div>
+                                <div class="form-group row">
+                                    <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail
+                                        Address</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="email_address" class="form-control" name="email-address">
                                     </div>
-
                                 </div>
-                            </div>
 
-                            <div class=" col-md-11 mt-4">
-                                <div class="card">
-                                    <div class="card-body m-4 mb-1">
-                                        <h5 class="card-title">
-                                            Latest Posts
-                                        </h5>
-
-                                        <div class="row p-3">
-                                            <div class="col-4 p-0">
-                                                <img src="./Assets/img/latest-house-1.jpg" width="100%" height="80%"
-                                                    alt="" srcset="">
-                                            </div>
-
-                                            <div class="col-8">
-                                                We are Offering the Best RED
-                                                <p class="latest-post-date">
-                                                    February 8, 2020
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row p-3">
-                                            <div class="col-4 p-0">
-                                                <img src="./Assets/img/latest-house-1.jpg" width="100%" height="80%"
-                                                    alt="" srcset="">
-                                            </div>
-
-                                            <div class="col-8">
-                                                We are Offering the Best RED
-                                                <p class="latest-post-date">
-                                                    February 8, 2020
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row p-3">
-                                            <div class="col-4 p-0">
-                                                <img src="./Assets/img/latest-house-1.jpg" width="100%" height="80%"
-                                                    alt="" srcset="">
-                                            </div>
-
-                                            <div class="col-8">
-                                                We are Offering the Best RED
-                                                <p class="latest-post-date">
-                                                    February 8, 2020
-                                                </p>
-                                            </div>
-                                        </div>
-
+                                <div class="form-group row">
+                                    <label for="user_name" class="col-md-4 col-form-label text-md-right">User
+                                        Name</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="user_name" class="form-control" name="username">
                                     </div>
-
                                 </div>
-                            </div>
 
+                                <div class="form-group row">
+                                    <label for="phone_number" class="col-md-4 col-form-label text-md-right">Phone
+                                        Number</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="phone_number" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="present_address"
+                                        class="col-md-4 col-form-label text-md-right">Address</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="present_address" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="nid_number" class="col-md-4 col-form-label text-md-right">Card
+                                        Number</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="card_number" class="form-control" name="card-number">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" onclick="success_function()" class="btn btn-primary">
+                                        Register
+                                    </button>
+                                </div>
                         </div>
-                    </div>
-
-                    <div class="col-md-8 p-0">
-                        <div class="row main-container-div">
-
-                            <div class="card-holder col-md-4 m-3 m-md-0 p-0">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-center">
-                                            <img class="agent-img" src="./Assets/img/132.jpg" alt="" srcset="">
-                                        </div>
-                                        <h5 class="card-title agent-name">
-                                            Aya Magdy
-                                        </h5>
-                                        <p class="work-place">
-                                            Real estate broker
-                                        </p>
-                                        <hr>
-                                        <p class="card-text d-flex justify-content-center">
-                                            b.gordon@homeid.com
-                                        </p>
-                                        <p class="d-flex justify-content-center">
-                                            +98 0390 909 039
-                                        </p>
-                                        <div class="btn agent-btn pb-0" style="width: 100%;">
-                                            <div class="row agent-btn-holder d-flex justify-content-center">
-                                                <div class="listing-amount">
-                                                    2
-                                                </div>
-                                                <div>
-                                                    Listing Properties
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        </div>
 
-
+    </main>
     <!-- Footer -->
     <footer class="text-left pt-5 pb-5 d-flex align-self-stretch"
         style="background-color:rgb(39, 39, 39); color: rgb(255, 255, 255);">
@@ -354,6 +273,7 @@
     </footer>
     <!-- Footer -->
 
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -363,9 +283,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
-
-    <script src="./Assets/js/Register-agent.js"></script>
-    <script src="./Assets/js/agent-veiwer.js"></script>
 </body>
 
 </html>
