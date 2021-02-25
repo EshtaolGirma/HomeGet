@@ -6,6 +6,7 @@ nav a {
 
     margin-top: 250px;
     margin-bottom: 300px;
+    height: 35rem;
     
 }  
 #cardbody{
@@ -13,6 +14,7 @@ nav a {
     color: #696969;
     font-size: 14px;
     font-weight: 400;
+    padding-top: 40px;
     padding-bottom: 50px;
     
 }
@@ -22,6 +24,9 @@ h2{
   font-size: 32px;
   font-weight: 500;
   
+}
+.card-body a{
+color:#696969;
 }
 .form-control{
   line-height: 50px;
