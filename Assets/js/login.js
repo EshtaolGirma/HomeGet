@@ -44,21 +44,21 @@ document.addEventListener("DOMContentLoaded", () => {
           (user.value == null || user.value == "") &&
           (pass.value == null || pass.value == "")
         ) {
-          user.placeholder = "please enter stg";
-          pass.placeholder = "please enter stg";
+          user.placeholder = "PLEASE ENTER YOUR EMAIL";
+          pass.placeholder = "PLEASE ENTER YOUR PASSWORD";
           input[0].style.borderColor = "red";
           input[1].style.borderColor = "red";
         } else if (user.value == null || user.value == "") {
-          user.placeholder = "please enter stg";
+          user.placeholder = "PLEASE ENTER YOUR PASSWORD";
           input[0].style.borderColor = "red";
         } else if (pass.value == null || pass.value == "") {
-          pass.placeholder = "please enter stg";
+          pass.placeholder = "PLEASE ENTER YOUR PASSWORD";
           input[1].style.borderColor = "red";
         } else if (userChecker() == 0) {
           console.log("successful");
           window.location.href = "index.html";
         } else {
-          console.log("Wrong username or password");
+          console.log("WRONG EMAIL OR PASSWORD");
         }
       };
     };
