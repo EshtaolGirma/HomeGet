@@ -1,5 +1,6 @@
 var DB2;
-var fullname = document.getElementById("fullname");
+var first_name = document.getElementById("first_name");
+var last_name = document.getElementById("last_name")
 var email = document.getElementById("email");
 var button = document.getElementById("button");
 var input = document.querySelectorAll("input");
@@ -23,20 +24,28 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         input[0].style.borderColor = "gray";
         input[1].style.borderColor = "gray";
+        input[2].style.borderColor = "gray";
         if (
-          (fullname.value == null || fullname.value == "") &&
+          (first_name.value == null || first_name.value == "") && (last_name.value==null || last_name.value == "") &&
           (email.value == null || email.value == "")
         ) {
-          fullname.placeholder = "please enter stg";
-          email.placeholder = "please enter stg";
+          first_name.placeholder = "PLEASE ENTER YOUR FIRST NAME";
+          last_name.placeholder = "PLEASE ENTER YOUR LAST NAME";
+          email.placeholder = "PLEASE ENTER YOUR EMAIL";
           input[0].style.borderColor = "red";
           input[1].style.borderColor = "red";
-        } else if (fullname.value == null || fullname.value == "") {
-          fullname.placeholder = "please enter stg";
+          input[2].style.borderColor = "red";
+
+        } else if (first_name.value == null || first_name.value == "") {
+          first_name.placeholder = "PLEASE ENTER YOUR FIRST NAME";
           input[0].style.borderColor = "red";
-        } else if (email.value == null || email.value == "") {
-          email.placeholder = "please enter stg";
+        }else if (last_name.value == null || last_name.value == "") {
+          last_name.placeholder = "PLEASE ENTER YOUR LAST NAME";
           input[1].style.borderColor = "red";
+        }
+         else if (email.value == null || email.value == "") {
+          email.placeholder = "PLEASE ENTER YOUR EMAIL";
+          input[2].style.borderColor = "red";
         } else {
           console.log("there was an error");
         }
