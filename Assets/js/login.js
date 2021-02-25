@@ -4,6 +4,8 @@ var user = document.getElementById("user");
 var pass = document.getElementById("pass");
 var button = document.getElementById("button");
 var input = document.querySelectorAll("input");
+var errord = document.getElementById("errord")
+
 document.addEventListener("DOMContentLoaded", () => {
   let HomeGet = indexedDB.open("HomeGetDB", 1);
 
@@ -58,7 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log("successful");
           window.location.href = "index.html";
         } else {
-          console.log("WRONG EMAIL OR PASSWORD");
+          errord.innerHTML= "Incorrect username or password"
+          errord.style.color= "red"
         }
       };
     };
