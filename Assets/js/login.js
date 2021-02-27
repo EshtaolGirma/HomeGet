@@ -2,7 +2,7 @@ var DB;
 // const loginBtn;
 var user = document.getElementById("user");
 var pass = document.getElementById("pass");
-var button = document.getElementById("button");
+var button = document.getElementById("button-login");
 var input = document.querySelectorAll("input");
 var errord = document.getElementById("errord")
 
@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
       }
-
-      button.onclick = function () {
+button.addEventListener('click', loginButton)
+      function loginButton(e) {
         e.preventDefault();
         input[0].style.borderColor = "gray";
         input[1].style.borderColor = "gray";
@@ -58,7 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
           input[1].style.borderColor = "red";
         } else if (userChecker() == 0) {
           console.log("successful");
+          localStorage.setItem("user", JSON.stringify({"email": user.value}))
           window.location.href = "index.html";
+          
         } else {
           errord.innerHTML= "Incorrect username or password"
           errord.style.color= "red"
