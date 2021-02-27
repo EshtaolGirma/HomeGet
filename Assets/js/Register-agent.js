@@ -29,11 +29,19 @@ function displayRegisterForm() {
 
   const nameLabel = document.createElement("label");
   nameLabel.className = "form-label";
-  nameLabel.textContent = "Full Name";
+  nameLabel.textContent = "First Name";
 
   const nameInput = document.createElement("input");
   nameInput.className = "form-control";
-  nameInput.placeholder = "Full Name...";
+  nameInput.placeholder = "First Name...";
+
+  const nameLabel1 = document.createElement("label");
+  nameLabel1.className = "form-label";
+  nameLabel1.textContent = "Last Name";
+
+  const nameInput1 = document.createElement("input");
+  nameInput1.className = "form-control";
+  nameInput1.placeholder = "Last Name...";
 
   // email input form
   const emailInputDiv = document.createElement("div");
@@ -158,6 +166,8 @@ function displayRegisterForm() {
 
   nameInputDiv.appendChild(nameLabel);
   nameInputDiv.appendChild(nameInput);
+  nameInputDiv.appendChild(nameLabel1);
+  nameInputDiv.appendChild(nameInput1);
   formDiv.appendChild(nameInputDiv);
 
   emailInputDiv.appendChild(emailLabel);
@@ -219,7 +229,7 @@ function displayRegisterForm() {
     e.preventDefault(); //the rest of code
     // Add to DB
     let newAgent = {
-      AgentName: nameInput.value,
+      AgentName: nameInput.value + " " + nameInput1.value,
       AgentEmail: emailInput.value,
       AgentMobileNUmber: mobileNumberInput.value,
       AgentOfficeAddress: officeAddressInput.value,
