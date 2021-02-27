@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     let newProperty = {
       PropertyName: "home short description",
-      HomeAddress: "home number",
+      PropertyImg: "Assets/Img/building.jpg",
+      HomeAddress: "122",
       PropertySubCity: "home SubCity",
       PropertyStreetNumber: "Street number",
       PropertyAreaSpecialName: "Area Special Name",
@@ -43,12 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
       Bathrooms: "bathrooms number",
       BedRooms: "bedrooms number",
       ExtraRooms: "Additional rooms number",
-      SpacialFeatures: "list features separated by @",
+      SpacialFeatures: "list@features@separated@by@q@",
       CustomerReview:
         "Customer Review separated by ~ from customer name and use | to separate it from others review. ",
       PropertyReviewPoints: "total point",
       PropertyReviewersNUmber: "total reviewer customer number",
       AgentName: "name",
+      PropertyDescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat itaque estet consectetur porro distinctio cumque ea iusto qui quasi, magni dignissimos harum eveniet rerumdolore expedita? Vel, commodi in?",
+      InternalRoomsImg: "https://source.unsplash.com/L7EwHkq1B2s~https://source.unsplash.com/5l-Q8p_feHE~https://source.unsplash.com/9LMRQdVv7hw~",
     };
 
     let newCustomer = {

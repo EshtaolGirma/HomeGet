@@ -103,15 +103,16 @@
     <h2 id="rentHeader">Luxury Villa In Alice</h2>
     <div class="slider">
         <div class="slider-items">
-            <div class="item active">
-                <img src="https://source.unsplash.com/L7EwHkq1B2s" />
+            <div  class="item active">
+               <img src="https://source.unsplash.com/L7EwHkq1B2s" />
             </div>
-            <div class="item">
-                <img src="https://source.unsplash.com/5l-Q8p_feHE" />
+            <div  class="item">
+               <img src="https://source.unsplash.com/5l-Q8p_feHE" />
             </div>
-            <div class="item">
-                <img src="https://source.unsplash.com/9LMRQdVv7hw" />
+            <div  class="item">
+               <img src="https://source.unsplash.com/9LMRQdVv7hw" />
             </div>
+  
 
         </div>
         <!-- slider controls -->
@@ -123,8 +124,9 @@
 
         <div class="row">
             <div class="main">
-                <h2>Luxury Villa In Alice</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat fugit perspiciatis, natus obcaecati
+                <h2 class="house-name">Luxury Villa In Alice</h2>
+                <p class="house-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat fugit
+                    perspiciatis, natus obcaecati
                     nisi eveniet distinctio doloribus consequuntur, molestiae voluptatum ipsam sint exercitationem
                     inventore! Ea ab nulla soluta porro debitis! Lorem ipsum dolor sit Lorem, ipsum dolor sit amet
                     consectetur adipisicing elit. Officiis minus excepturi fuga porro atque. Expedita, dolores aliquid
@@ -132,18 +134,65 @@
                     harum!</p>
                 <hr style="width:100%;text-align:left;margin-top:30px;margin-bottom: 30px;">
                 <h2>Details</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut blanditiis cum nam nobis iure, debitis
-                    aspernatur rerum ad distinctio dolorum velit aliquam. Vel sit provident laudantium accusamus magni
-                    voluptas distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero eius ullam
-                    consectetur ducimus sit illum ex pariatur voluptatibus voluptate veritatis minima repellendus
-                    tempora, ipsam delectus cum quis, quia suscipit cupiditate.</p>
+                <div class="house-details">
+                    <div class="row">
+                        <p class="col-md">
+                            House Number: <span class="house-number">...</span>
+                        </p>
+                        <p class="col-md">
+                            House Street Number: <span class="house-street-number">...</span>
+                        </p>
+                        <p class="col-md">
+                            House Sub-city: <span class="house-sub-city">...</span>
+                        </p>
+                    </div>
+                    <div class="row">
+                        <p class="col-md">
+                            House Area Special Name: <span class="house-area-special-name">...</span>
+                        </p>
+                        <p class="col-md">
+                        </p>
+                        <p class="col-md">
+                            
+                        </p>
+                    </div>
+                    <div class="row">
+                        <p class="col-md">
+                            House Type: <span class="house-type">...</span>
+                        </p>
+                        <p class="col-md">
+                            Building Size: <span class="house-building-size">...</span>
+                        </p>
+                        <p class="col-md">
+                            Property Land Size: <span class="house-land-size">...</span>
+                        </p>
+                    </div>
+                    <div class="row mt-3">
+                        <p class="col-md">
+                            Bed Rooms: <span class="house-bed-room">...</span>
+                        </p>
+                        <p class="col-md">
+                            Bath Rooms: <span class="house-bath-room">...</span>
+                        </p>
+                        <p class="col-md">
+                            Garages: <span class="house-garages">...</span>
+                        </p>
+                        <p class="col-md">
+                            Extra Rooms: <span class="house-extra-rooms">...</span>
+                        </p>
+                    </div>
+                    <div class="row">
+                        <p class="col-md">
+                            Monthly Payment: <span class="house-fee">...</span>
+                        </p>
+                       
+                    </div>
+                </div>
+
                 <hr style="width:100%;text-align:left;margin-top:30px;margin-bottom: 30px;">
                 <h2>Features</h2>
                 <ul class="featureList">
-                    <li>Gym</li>
-                    <li>Laundary</li>
-                    <li>Sauna</li>
-                    <li>Microwave</li>
+                    
                 </ul>
             </div>
             <div class="side">
@@ -152,6 +201,12 @@
                     <h5 id="profileName">EKMZ</h5>
                     <p id="profileDescription">Property Agent <br>property.agent@gmail.com <br>+251 91234567</p>
                 </div>
+                <form action="mailto:property.agent@gmail.com">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <input type="email" id="email" name="email" placeholder="Your Email">
+                    <textarea id="subject" name="subject"  style="height:100px">Hello, I am interested in [Luxury Villa In Alice]</textarea>
+                    <input type="submit" value="Send Message">
+                  </form>
             </div>
         </div>
     </div>
@@ -281,51 +336,6 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 
-    <script>
-        var slides = document.querySelector('.slider-items').children;
-        var nextSlide = document.querySelector(".right-slide");
-        var prevSlide = document.querySelector(".left-slide");
-        var totalSlides = slides.length;
-        var index = 0;
-
-        nextSlide.onclick = function () {
-            next("next");
-        }
-        prevSlide.onclick = function () {
-            next("prev");
-        }
-
-        function next(direction) {
-
-            if (direction == "next") {
-                index++;
-                if (index == totalSlides) {
-                    index = 0;
-                }
-            }
-            else {
-                if (index == 0) {
-                    index = totalSlides - 1;
-                }
-                else {
-                    index--;
-                }
-            }
-
-            for (i = 0; i < slides.length; i++) {
-                slides[i].classList.remove("active");
-            }
-            slides[index].classList.add("active");
-
-        }
-
-
-
-
-
-
-
-    </script>
 
 
 
@@ -333,7 +343,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
+<<<<<<< HEAD
      <script src="./Assets/js/logout.js"></script>
+=======
+        <script src="./Assets/js/rent.js"></script>
+>>>>>>> 9a91d6677dc3b6b7b234eee96876ef98e5c41c02
 </body>
 
 </html>
