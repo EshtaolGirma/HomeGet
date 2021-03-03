@@ -2,8 +2,10 @@ var DB;
 // const loginBtn;
 var user = document.getElementById("user");
 var pass = document.getElementById("pass");
-var button = document.getElementById("button");
+var button = document.getElementById("button-login");
 var input = document.querySelectorAll("input");
+var errord = document.getElementById("errord")
+
 document.addEventListener("DOMContentLoaded", () => {
   let HomeGet = indexedDB.open("HomeGetDB", 1);
 
@@ -35,8 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
       }
-
-      button.onclick = function () {
+button.addEventListener('click', loginButton)
+      function loginButton(e) {
         e.preventDefault();
         input[0].style.borderColor = "gray";
         input[1].style.borderColor = "gray";
@@ -44,21 +46,24 @@ document.addEventListener("DOMContentLoaded", () => {
           (user.value == null || user.value == "") &&
           (pass.value == null || pass.value == "")
         ) {
-          user.placeholder = "please enter stg";
-          pass.placeholder = "please enter stg";
+          user.placeholder = "PLEASE ENTER YOUR EMAIL";
+          pass.placeholder = "PLEASE ENTER YOUR PASSWORD";
           input[0].style.borderColor = "red";
           input[1].style.borderColor = "red";
         } else if (user.value == null || user.value == "") {
-          user.placeholder = "please enter stg";
+          user.placeholder = "PLEASE ENTER YOUR PASSWORD";
           input[0].style.borderColor = "red";
         } else if (pass.value == null || pass.value == "") {
-          pass.placeholder = "please enter stg";
+          pass.placeholder = "PLEASE ENTER YOUR PASSWORD";
           input[1].style.borderColor = "red";
         } else if (userChecker() == 0) {
           console.log("successful");
+          localStorage.setItem("user", JSON.stringify({"email": user.value}))
           window.location.href = "index.html";
+          
         } else {
-          console.log("Wrong username or password");
+          errord.innerHTML= "Incorrect username or password"
+          errord.style.color= "red"
         }
       };
     };
