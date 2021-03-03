@@ -15,13 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
     DB = HomeGet.result;
 
     let objectStore = DB.transaction("Agents").objectStore("Agents");
-    
+
     console.log(objectStore);
     objectStore.openCursor().onsuccess = function (e) {
       console.log("we are here");
       let cursor = e.target.result;
-      console.log(cursor.value.AgentEmail)
-      console.log(cursor.value.AgentPassword)
+      console.log(cursor.value.AgentEmail);
+      console.log(cursor.value.AgentPassword);
 
       function userChecker() {
         if (cursor) {
@@ -51,8 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (user.value == null || user.value == "") {
           user.placeholder = "please enter stg";
           input[0].style.borderColor = "red";
-        }
-        else if (pass.value == null || pass.value == "") {
+        } else if (pass.value == null || pass.value == "") {
           pass.placeholder = "please enter stg";
           input[1].style.borderColor = "red";
         } else if (userChecker() == 0) {
