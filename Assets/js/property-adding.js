@@ -84,7 +84,7 @@ let DB;
     transaction.onerror = () => {
       console.log("There was an error, try again!");
     };
-    // location.reload();
+    location.reload();
     // location.href = "agents.html"
   }
 

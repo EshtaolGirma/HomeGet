@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
       InternalRoomsImg: "https://source.unsplash.com/L7EwHkq1B2s~https://source.unsplash.com/5l-Q8p_feHE~https://source.unsplash.com/9LMRQdVv7hw~",
     };
 
-    let newCustomer = {
-      CustomerName: "Abel",
-      CustomerEmail: "abel@gmail.com",
-      CustomerPhoneNumber: "0987654321",
-      Password: "customer id number",
-      CustomerAddress: "customer address",
-      watchListPropertyID: "Home ID separated by @",
-    };
+    // let newCustomer = {
+    //   CustomerName: "Abel",
+    //   CustomerEmail: "abel@gmail.com",
+    //   CustomerPhoneNumber: "0987654321",
+    //   Password: "customer id number",
+    //   CustomerAddress: "customer address",
+    //   watchListPropertyID: "Home ID separated by @",
+    // };
     let newCustomerContact = {
       CustomerName: "contact info name",
       CustomerEmail: "contact info email",
@@ -77,9 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let objectStore2 = transaction2.objectStore("Property");
     let request2 = objectStore2.add(newProperty);
 
-    let transaction3 = DB.transaction(["Customer"], "readwrite");
-    let objectStore3 = transaction3.objectStore("Customer");
-    let request3 = objectStore3.add(newCustomer);
+    // let transaction3 = DB.transaction(["Customer"], "readwrite");
+    // let objectStore3 = transaction3.objectStore("Customer");
+    // let request3 = objectStore3.add(newCustomer);
 
     let transaction4 = DB.transaction(["CustomerContact"], "readwrite");
     let objectStore4 = transaction4.objectStore("CustomerContact");

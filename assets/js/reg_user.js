@@ -1,7 +1,7 @@
 var name1 = document.querySelector("#full_name");
 var email1 = document.querySelector("#email_address");
-var address1 = document.querySelector("#present_address");
-var card1 = document.querySelector("#card_number");
+var address1 = document.querySelector("#password");
+var card1 = document.querySelector("#subList");
 var phone1 = document.querySelector("#phone_number");
 
 let DB1;
@@ -23,8 +23,8 @@ function addNewUser(e) {
     CustomerName: name1.value,
     CustomerEmail: email1.value,
     CustomerPhoneNumber: phone1.value,
-    CustomerNIDNumber: card1.value,
-    CustomerAddress: address1.value,
+    CustomerAddress: card1.options[card1.selectedIndex].text,
+    Password: 123456,
   };
 
   let transaction5 = DB1.transaction(["Customer"], "readwrite");
