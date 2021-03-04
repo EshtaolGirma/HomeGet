@@ -33,6 +33,7 @@ function displayRegisterForm() {
 
   const nameInput = document.createElement("input");
   nameInput.className = "form-control";
+  nameInput.pattern = /[A-Z]/
   nameInput.placeholder = "First Name...";
 
   const nameLabel1 = document.createElement("label");
@@ -156,6 +157,7 @@ function displayRegisterForm() {
 
   const registerButton = document.createElement("button");
   registerButton.className = "btn btn-primary btn-lg mr-1";
+  registerButton.type = "Submit"
   registerButton.textContent = "Register";
 
   const cancelButton = document.createElement("button");

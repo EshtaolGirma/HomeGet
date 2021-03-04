@@ -14,7 +14,9 @@ body {
   justify-content: center;
   background: rgb(245, 244, 240);
 }
-
+.fas {
+  color: #0ec6d5;
+}
 .houseList {
   display: flex;
   width: 100%;
