@@ -32,3 +32,35 @@ function sortList() {
       }
     }
   }
+  // sorting by date
+  var sortOrder = "desc";
+  function sortByDate() {
+                  var dateArray = [];
+                   var dateMap = {};
+                   var dateElements = jQuery(".date_elements_class");
+                      jQuery(dateElements).each(function() {
+
+                          dateMap[$(this).text().replace(/^\s+|\s+$/g, '')] = $(this).parent();
+                          dateArray.push($(this).text().replace(/^\s+|\s+$/g, ''));
+                      });
+                      dateArray.sort();
+                      dateArray.sort(function(a, b) {
+                              a = new Date(a);
+                              b = new Date(b);
+                              return a>b;
+                          });
+                      if(sortOrder === "desc") {
+                          sortOrder = "asc";
+                      } else {
+                          dateArray.reverse();
+                          sortOrder = "desc";
+
+                      }
+
+
+                      jQuery(jQuery("").find("")[0]).html("");
+
+                      for (var i = 0; i < dateArray.length; i++) {
+                          jQuery(jQuery("table.tbl-general").find(".list-holder")[0]).append(dateMap[dateArray[i]]);
+                      }
+                    }
