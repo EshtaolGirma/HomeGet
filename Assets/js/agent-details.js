@@ -168,8 +168,12 @@ document.addEventListener("DOMContentLoaded", () => {
           listCardHolder.className = "row";
           const listCardPhotoHolder = document.createElement("div");
           listCardPhotoHolder.classList = "listing-property-pic col-md";
+          const listImgLink = document.createElement("a");
+          listImgLink.onclick = function () {
+            window.location.href = "rent.html?" + cursor.value.HomeAddress;
+          };
           const listCardPhoto = document.createElement("img");
-          listCardPhoto.setAttribute("src", "./Assets/img/house 2.jpg");
+          listCardPhoto.setAttribute("src", cursor.value.PropertyImg);
           listCardPhoto.style.width = "100%";
           listCardPhoto.style.borderRadius = "5px";
           const listCardInfoHolder = document.createElement("div");
@@ -219,7 +223,8 @@ document.addEventListener("DOMContentLoaded", () => {
           basicFeaturesHolder.appendChild(listCardBathRoomsNumber);
           basicFeaturesHolder.appendChild(listCardLandSize);
 
-          listCardPhotoHolder.appendChild(listCardPhoto);
+          listImgLink.appendChild(listCardPhoto);
+          listCardPhotoHolder.appendChild(listImgLink);
           listCardHolder.appendChild(listCardPhotoHolder);
 
           listCardInfoHolder.appendChild(listCardName);
@@ -230,6 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
           listCard.appendChild(listCardHolder);
           agentListingListHolder.appendChild(listCard);
         }
+        cursor.continue();
       }
     };
   }

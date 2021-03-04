@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rent</title>
+    <title>Properties Adding - HomeGet</title>
+
     <!-- Bootstrap CSS CDN  -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -17,11 +18,9 @@
 
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/618286edad.js" crossorigin="anonymous"></script>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <!-- Custom Css -->
-    <link rel="stylesheet" href="./assets/css/rent.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./Assets/CSS/property-adding.css">
     <link rel="stylesheet" href="./Assets/CSS/footer.css">
 
 </head>
@@ -97,121 +96,175 @@
             </nav>
         </div>
     </div>
+    <!-- Nav Bar -->
 
-    <!-- NavBar End -->
 
-    <h2 id="rentHeader">Luxury Villa In Alice</h2>
+    <div class="container-fluid p-0 mb-5">
+        <div class="jumbotron">
+            <div class="row pb-3">
+                <div class="col-2"></div>
+                <div>
+                    <P>
+                        <a href="#">Home</a> <span style="padding-left: 5px; padding-right: 5px"> / </span>
+                        <a href="#" class="link-item active">Properties Adding</a>
 
-    <div class="slider">
-        <div class="slider-items">
-            <div class="item active">
-                <img class="img1" />
+                    </P>
+                    <h4>Properties Adding</h4>
+
+                </div>
             </div>
-            <div class="item">
-                <img class="img2" />
-            </div>
-            <div class="item">
-                <img class="img3" />
-            </div>
 
+            <hr>
         </div>
-        <!-- slider controls -->
-        <div class="left-slide">
-            < </div>
-                <div class="right-slide"> > </div>
-                <!-- slider controls -->
-        </div>
+
+        <!-- Page Content -->
 
         <div class="row">
-            <div class="main">
-                <h2 class="house-name d-inline">Luxury Villa In Alice</h2>
-                <div class="btn btn-primary mb-3 ml-3 book-btn">Bookmark</div>
-                <p class="house-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat fugit
-                    perspiciatis, natus obcaecati
-                    nisi eveniet distinctio doloribus consequuntur, molestiae voluptatum ipsam sint exercitationem
-                    inventore! Ea ab nulla soluta porro debitis! Lorem ipsum dolor sit Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. Officiis minus excepturi fuga porro atque. Expedita, dolores aliquid
-                    atque, ratione quod, facilis accusamus minima autem voluptas tenetur nobis assumenda repellendus
-                    harum!</p>
-                <hr style="width:100%;text-align:left;margin-top:30px;margin-bottom: 30px;">
-                <h2>Details</h2>
-                <div class="house-details">
-                    <div class="row">
-                        <p class="col-md">
-                            House Number: <span class="house-number">...</span>
-                        </p>
-                        <p class="col-md">
-                            House Street Number: <span class="house-street-number">...</span>
-                        </p>
-                        <p class="col-md">
-                            House Sub-city: <span class="house-sub-city">...</span>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p class="col-md">
-                            House Area Special Name: <span class="house-area-special-name">...</span>
-                        </p>
-                        <p class="col-md">
-                        </p>
-                        <p class="col-md">
+            <div class="col-2"></div>
+            <div class="wrapper col-10">
 
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p class="col-md">
-                            House Type: <span class="house-type">...</span>
-                        </p>
-                        <p class="col-md">
-                            Building Size: <span class="house-building-size">...</span>
-                        </p>
-                        <p class="col-md">
-                            Property Land Size: <span class="house-land-size">...</span>
-                        </p>
-                    </div>
-                    <div class="row mt-3">
-                        <p class="col-md">
-                            Bed Rooms: <span class="house-bed-room">...</span>
-                        </p>
-                        <p class="col-md">
-                            Bath Rooms: <span class="house-bath-room">...</span>
-                        </p>
-                        <p class="col-md">
-                            Garages: <span class="house-garages">...</span>
-                        </p>
-                        <p class="col-md">
-                            Extra Rooms: <span class="house-extra-rooms">...</span>
-                        </p>
-                    </div>
-                    <div class="row">
-                        <p class="col-md">
-                            Monthly Payment: <span class="house-fee">...</span>
-                        </p>
+                <div class="row pb-4 col-md-10 list-holder">
+
+                    <div class="formContainer col-12">
+                        <form action="">
+                            <form>
+                                <div class="row">
+                                    <div class="form-group col-md">
+                                        <label for="propertyName">Property Name</label>
+                                        <input type="text" class="form-control" id="propertyName"
+                                            placeholder="House one">
+                                    </div>
+                                    <div class="form-group col-md">
+                                        <label for="propertyNumber">House Number</label>
+                                        <input type="text" class="form-control" id="propertyNumber" placeholder="1234">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md">
+                                        <label for="streetNumber">Street Number</label>
+                                        <input type="text" class="form-control" id="streetNumber"
+                                            placeholder="st. 9123">
+                                    </div>
+                                    <div class="form-group col-md">
+                                        <label for="specialName">Area Special Name</label>
+                                        <input type="text" class="form-control" id="specialName"
+                                            placeholder="Saris Abo">
+                                    </div>
+                                    <div class="form-group col-md drop2">
+                                        <select  id="subcity"
+                                            class="col-12 btn-lg">
+                                            <option value="value1">Bole</option>
+                                            <option value="value2">Text two</option>
+                                            <option value="value3">Text three</option>
+                                            <option value="valueN">Text N</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row col-8">
+                                    <div class="form-group col-md">
+                                        <label for="fee">Monthly Fee per birr</label>
+                                        <input type="text" class="form-control" id="fee" placeholder="2000">
+                                    </div>
+                                    <div class="form-group col-md drop2">
+                                        <select id="btype"
+                                            class="col-12 btn-lg">
+                                            <option value="value1">Text one</option>
+                                            <option value="value2">Text two</option>
+                                            <option value="value3">Text three</option>
+                                            <option value="valueN">Text N</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md">
+                                        <label for="propertyLandSize">Property Land Size per square meter</label>
+                                        <input type="text" class="form-control" id="propertyLandSize" placeholder="500">
+                                    </div>
+                                    <div class="form-group col-md">
+                                        <label for="propertySize">Property Size per square meter</label>
+                                        <input type="text" class="form-control" id="propertySize" placeholder="200">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md">
+                                        <label for="bedrooms">BedRooms Number</label>
+                                        <input type="number" class="form-control" id="bedrooms" placeholder="0">
+                                    </div>
+                                    <div class="form-group col-md">
+                                        <label for="bsthrooms">BathRooms Number</label>
+                                        <input type="number" class="form-control" id="bathrooms" placeholder="0">
+                                    </div>
+                                    <div class="form-group col-md">
+                                        <label for="garages">Garages Number</label>
+                                        <input type="number" class="form-control" id="garages" placeholder="0">
+                                    </div>
+                                    <div class="form-group col-md">
+                                        <label for="extraRooms">Extra Rooms Number</label>
+                                        <input type="number" class="form-control" id="extraRooms" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <!-- Images -->
+                                <div class="row mt-4">
+                                    <div class="form-group col-md">
+                                        <label for="externalPic">Property External Image</label>
+                                        <input type="text" class="form-control" id="externalPic"
+                                            placeholder="./Assets/img/house.jpg">
+                                    </div>
+                                    <div class="form-group col-md">
+                                        <label for="interPic1">Property Internal Image 1</label>
+                                        <input type="text" class="form-control" id="interPic1"
+                                            placeholder="./Assets/img/house.jpg">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md">
+                                        <label for="interPic2">Property Internal Image 2</label>
+                                        <input type="text" class="form-control" id="interPic2"
+                                            placeholder="./Assets/img/house.jpg">
+                                    </div>
+                                    <div class="form-group col-md">
+                                        <label for="interPic3">Property Internal Image 3</label>
+                                        <input type="text" class="form-control" id="interPic3"
+                                            placeholder="./Assets/img/house.jpg">
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <div class="row">
+                                            <label for="features">Property Special Features separated by comma</label>
+                                            <input type="text" class="form-control" id="features"
+                                                placeholder="gym, spa">
+                                        </div>
+                                        <div class="row mt-3">
+                                            <label for="description">Property Description</label>
+                                        </div>
+
+                                        <div class="row">
+                                            <textarea name="message" id="message12" cols="150" rows="8"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <button type="button" id="reg" class="btn btn-primary col-2 mt-5">Submit</button>
+                            </form>
+                        </form>
 
                     </div>
+
                 </div>
-
-                <hr style="width:100%;text-align:left;margin-top:30px;margin-bottom: 30px;">
-                <h2>Features</h2>
-                <ul class="featureList">
-
-                </ul>
-            </div>
-            <div class="side">
-                <div class="profile">
-                    <img src="./assets/img/001.png" alt="profile" id="profilePic"><br><br>
-                    <h5 id="profileName">EKMZ</h5>
-                    <p class="text-center"><span id="profileDescription">Property Agent</span> <br><span id="profileEmail">property.agent@gmail.com</span>  <br><span id="profileNumber">+251 91234567</span></p>
-                </div>
-                <form action="mailto:property.agent@gmail.com">
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                    <input type="email" id="email" name="email" placeholder="Your Email">
-                    <textarea id="subject" name="subject"
-                        style="height:100px">Hello, I am interested in [Luxury Villa In Alice]</textarea>
-                    <input type="submit" value="Send Message">
-                </form>
             </div>
         </div>
+
+
+
     </div>
+
     <!-- Footer -->
     <footer class="text-left pt-5 pb-5 d-flex align-self-stretch"
         style="background-color:rgb(39, 39, 39); color: rgb(255, 255, 255);">
@@ -326,10 +379,12 @@
         </div>
         <!-- Grid container -->
     </footer>
+
     <!-- Footer -->
 
+
     <!-- Bootstrap core JavaScript
-================================================== -->
+    ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -337,13 +392,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
-
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
+    <!-- Custom Js  -->
     <script src="./Assets/js/logout.js"></script>
-    <script src="./Assets/js/rent.js"></script>
+    <script src="./Assets/js/property-adding.js"></script>
 </body>
 
 </html>

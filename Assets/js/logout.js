@@ -1,7 +1,7 @@
 var user= localStorage.getItem("user")
 signinb= document.getElementById("signinb")
 logoutb= document.getElementById("logoutb")
-console.log(logoutb)
+// console.log(logoutb)
 if (JSON.parse(user) != null){
     
     signinb.style.display=  "none"

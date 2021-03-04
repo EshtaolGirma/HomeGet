@@ -70,12 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
         agentBtnInfoHolder.className =
           "row agent-btn-holder d-flex justify-content-center";
         const listingAmount = document.createElement("div");
-        listingAmount.className = "listing-amount";
-        if (cursor.value.ListingNumber == undefined) {
-          listingAmount.innerText = 0;
-        } else {
-          listingAmount.innerText = cursor.value.listingNumber;
-        }
 
         const listingP = document.createElement("div");
         listingP.innerText = "listing Properties";

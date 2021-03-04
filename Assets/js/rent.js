@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     objectStore.openCursor().onsuccess = function (e) {
       let cursor = e.target.result;
       if (cursor) {
-          console.log(Ids);
+        console.log(Ids);
         if (cursor.value.HomeAddress == Ids) {
           houseNameTitle.innerText = cursor.value.PropertyName;
           houseName.innerText = cursor.value.PropertyName;
@@ -61,6 +61,39 @@ document.addEventListener("DOMContentLoaded", () => {
           extraRoom.innerText = cursor.value.ExtraRooms;
           fee.innerText = cursor.value.PropertyFee;
 
+          var transaction2 = DB.transaction(["Agents"]);
+          var objectStore2 = transaction2.objectStore("Agents");
+          objectStore2.openCursor().onsuccess = function(e){
+            let cursor2 = e.target.result;
+            if(cursor2){
+              if (cursor2.value.AgentName == cursor.value.AgentName){
+                const agentName = document.querySelector("#profileName")
+                const agentEmail = document.querySelector("#profileEmail")
+                const agentNumber = document.querySelector("#profileNumber")
+                const agentDes = document.querySelector("#profileDescription")
+                agentName.innerText = cursor2.value.AgentName;
+                agentEmail.innerText = cursor2.value.AgentEmail;
+                agentNumber.innerText = cursor2.value.AgentMobileNUmber;
+                agentDes.innerText = cursor2.value.oneLineDescription
+              }
+              cursor2.continue();
+            }
+          }
+
+          const bookBtn = document.querySelector(".book-btn");
+          bookBtn.addEventListener("click", function () {
+            let transaction3 = DB.transaction(["Customer"], "readwrite");
+            let objectStore3 = transaction3.objectStore("Customer");
+            objectStore3.openCursor().onsuccess = function (e) {
+              let cursor1 = e.target.result;
+              if (cursor1) {
+                if(cursor1.value.CustomerEmail == localStorage.getItem("user")){
+                  cursor1.value.watchListPropertyID = 
+                  cursor1.value.watchListPropertyID  + cursor.value.HomeAddress + "@"
+                }
+                cursor1.continue();
+              }}
+          });
           let features = cursor.value.SpacialFeatures;
           let feature1 = "";
           let fe = "";
@@ -91,43 +124,40 @@ document.addEventListener("DOMContentLoaded", () => {
           Image2.setAttribute("src", imgFinal[1]);
           Image3.setAttribute("src", imgFinal[2]);
         }
+        cursor.continue();
       }
     };
   }
 });
-var slides = document.querySelector('.slider-items').children;
-        var nextSlide = document.querySelector(".right-slide");
-        var prevSlide = document.querySelector(".left-slide");
-        var totalSlides = slides.length;
-        var index = 0;
+var slides = document.querySelector(".slider-items").children;
+var nextSlide = document.querySelector(".right-slide");
+var prevSlide = document.querySelector(".left-slide");
+var totalSlides = slides.length;
+var index = 0;
 
-        nextSlide.onclick = function () {
-            next("next");
-        }
-        prevSlide.onclick = function () {
-            next("prev");
-        }
+nextSlide.onclick = function () {
+  next("next");
+};
+prevSlide.onclick = function () {
+  next("prev");
+};
 
-        function next(direction) {
+function next(direction) {
+  if (direction == "next") {
+    index++;
+    if (index == totalSlides) {
+      index = 0;
+    }
+  } else {
+    if (index == 0) {
+      index = totalSlides - 1;
+    } else {
+      index--;
+    }
+  }
 
-            if (direction == "next") {
-                index++;
-                if (index == totalSlides) {
-                    index = 0;
-                }
-            }
-            else {
-                if (index == 0) {
-                    index = totalSlides - 1;
-                }
-                else {
-                    index--;
-                }
-            }
-
-            for (i = 0; i < slides.length; i++) {
-                slides[i].classList.remove("active");
-            }
-            slides[index].classList.add("active");
-
-        }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+  slides[index].classList.add("active");
+}
