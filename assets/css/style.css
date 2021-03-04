@@ -11,6 +11,14 @@
   margin-top: 1em;
   padding: 10em;
 }
+#broker_name{
+  width: 20%;
+  height: 10%;
+  padding: 13px;
+  border-radius: 4px;
+  border: 2px solid #1ca0b8;
+  font-size: 15px;
+}
 a:hover {
   color: black;
 }
