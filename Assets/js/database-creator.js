@@ -102,9 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
     request2.onsuccess = () => {
       console.log("Property added");
     };
-    request3.onsuccess = () => {
-      console.log("Customer added");
-    };
+    // request3.onsuccess = () => {
+    //   console.log("Customer added");
+    // };
     request4.onsuccess = () => {
       console.log("Customer contact added");
     };
