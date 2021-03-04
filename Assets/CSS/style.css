@@ -19,6 +19,9 @@
   border: 2px solid #1ca0b8;
   font-size: 15px;
 }
+#dropdownMenuButton{
+  height: 100%;
+}
 a:hover {
   color: black;
 }
